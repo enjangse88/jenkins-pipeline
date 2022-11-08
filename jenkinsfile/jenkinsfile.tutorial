@@ -1,0 +1,19 @@
+pipeline {
+
+   agent any
+
+   stages{
+      
+     stage("Hello world"){
+       steps{
+         sh '''
+           ssh -o StrictHostKeyChecking 192.168.56.103 "echo hello-world"
+         '''
+       } 
+      
+     }
+
+
+   }
+
+}
